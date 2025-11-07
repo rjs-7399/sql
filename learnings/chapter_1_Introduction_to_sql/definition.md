@@ -101,7 +101,6 @@ MySQL, PostgreSQL, Oracle, SQL Server, SQLite
 * In the **data engineering world**, we mostly use **SQL with relational databases**, but **NoSQL systems** are used for special use cases like **real-time data**, **large-scale analytics**, or **unstructured content**.
 
 
-
 ## 🏗️ Database Structure
 
 * Any **database management system** holds **one server** and **multiple databases** as per the organization’s needs.
@@ -112,6 +111,91 @@ MySQL, PostgreSQL, Oracle, SQL Server, SQLite
 * This is the standard **hierarchical structure** in which data is organized in most **data-oriented organizations**.
 
 
+## 🔑 Keys in Databases
+
+* **Keys** are used to **uniquely identify records** and **maintain relationships** between tables.
+
+### Primary Key
+
+* A **Primary Key** uniquely identifies each record in a table.
+* It **cannot be NULL** and must contain **unique values**.
+* Each table can have **only one primary key**.
+* Example: `employee_id` in an employee table.
+
+```sql
+CREATE TABLE employees (
+  employee_id INT PRIMARY KEY,
+  name VARCHAR(100),
+  department VARCHAR(50)
+);
+```
+
+### Foreign Key
+
+* A **Foreign Key** is a field that **links one table to another**.
+* It references the **Primary Key** of another table to create a **relationship**.
+* It ensures **referential integrity** between tables.
+* Example: `department_id` in `employees` table referencing `departments` table.
+
+```sql
+CREATE TABLE departments (
+  department_id INT PRIMARY KEY,
+  department_name VARCHAR(100)
+);
+
+CREATE TABLE employees (
+  employee_id INT PRIMARY KEY,
+  name VARCHAR(100),
+  department_id INT,
+  FOREIGN KEY (department_id) REFERENCES departments(department_id)
+);
+```
+
+### Candidate Key
+
+* A **Candidate Key** is any column (or set of columns) that can uniquely identify a record.
+* One of them is chosen as the **Primary Key**.
+* Example: both `employee_id` and `email` could uniquely identify an employee — either could be a candidate key.
+
+
+## 🧮 SQL Command Types (DDL and DML)
+
+SQL commands are broadly divided into categories based on their functionality.
+
+### Data Definition Language (DDL)
+
+* Used to **define or modify the structure** of the database (schema, tables, etc.).
+* Examples:
+
+  * `CREATE` → Create database objects (tables, views, etc.)
+  * `ALTER` → Modify existing table structure
+  * `DROP` → Delete database objects
+  * `TRUNCATE` → Remove all data from a table but keep its structure
+
+```sql
+CREATE TABLE employees (
+  id INT,
+  name VARCHAR(100)
+);
+```
+
+### Data Manipulation Language (DML)
+
+* Used to **manipulate and manage data** inside tables.
+* Examples:
+
+  * `INSERT` → Add new records
+  * `UPDATE` → Modify existing records
+  * `DELETE` → Remove records
+  * `SELECT` → Retrieve data from one or more tables
+
+```sql
+INSERT INTO employees VALUES (1, 'John Doe');
+SELECT * FROM employees;
+```
+
+
+
 ## 🧾 Summary
 
 * **Database** → Stores data in structured tables
@@ -119,4 +203,5 @@ MySQL, PostgreSQL, Oracle, SQL Server, SQLite
 * **ER (Entity Relationship)** → Defines how tables are related
 * **SQL** → Language to query and manipulate data
 * **DBMS** → Manages databases efficiently and handles multiple user access
-
+* **Keys** → Uniquely identify and link data between tables
+* **DDL/DML** → Define and manipulate database structure and records
