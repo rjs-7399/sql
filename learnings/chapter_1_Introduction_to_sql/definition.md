@@ -57,9 +57,50 @@ To handle **huge and structured data efficiently**, they use **databases**.
 | Medium       | **SQL Server / MySQL / PostgreSQL**                                            | On-premise or small-scale cloud deployments.           |
 | Large        | **Cloud RDS or Data Warehouse (e.g., AWS RDS, Snowflake, BigQuery, Redshift)** | Scalable solutions for handling enterprise-level data. |
 
----
 
-### 🧾 Summary
+## 🧱 Types of Databases
+
+* There are multiple types of databases.
+### Relational Databases
+- store the data in the form of **tables (rows and columns)**.
+- We can connect multiple tables and run **SQL queries** to get the required results.
+- These are called **relational databases**.
+
+**Examples:**
+MySQL, PostgreSQL, Oracle, SQL Server, SQLite
+
+
+
+### Key-Value Databases
+
+- Store data in the form of **key-value pairs**, where the key acts as an identifier (like an index) and the value contains the actual data.
+- Commonly used for **fast lookups**, **session management**, and **caching**.
+- **Examples:** Redis, Amazon DynamoDB
+
+### Column-Based Databases
+
+- Store data **by columns** instead of rows.
+- Optimized for **analytical queries**, **aggregations**, and **data warehousing**.
+- **Examples:** Apache Cassandra, HBase, Amazon Redshift, ClickHouse
+
+### Graph Databases
+
+- Store data in the form of **nodes (entities)** and **edges (relationships)**.
+- Useful for modeling **networks**, **social graphs**, or **recommendation systems**.
+- **Examples:** Neo4j, Amazon Neptune
+
+### Document Databases
+
+- Store data as **JSON-like documents**, allowing flexible and semi-structured schemas.
+- Ideal for **content management systems**, **logs**, and **metadata stores**.
+- **Examples:** MongoDB, CouchDB
+
+
+- All of these (except relational databases) are collectively called **NoSQL databases**.
+- In the **data engineering world**, we mostly use **SQL with relational databases**, but **NoSQL systems** are used for special use cases like **real-time data**, **large-scale analytics**, or **unstructured content**.
+
+
+## 🧾 Summary
 
 * **Database** → Stores data in structured tables
 * **Table** → Holds rows and columns of data
