@@ -31,7 +31,6 @@ To handle **huge and structured data efficiently**, they use **databases**.
   to **create**, **read**, **update**, and **delete** data (CRUD operations).
 * SQL allows us to query complex relationships and extract the required information efficiently.
 
----
 
 ## ⚙️ Database Management System (DBMS)
 
@@ -61,43 +60,56 @@ To handle **huge and structured data efficiently**, they use **databases**.
 ## 🧱 Types of Databases
 
 * There are multiple types of databases.
+
 ### Relational Databases
-- store the data in the form of **tables (rows and columns)**.
-- We can connect multiple tables and run **SQL queries** to get the required results.
-- These are called **relational databases**.
+
+* Store the data in the form of **tables (rows and columns)**.
+* We can connect multiple tables and run **SQL queries** to get the required results.
+* These are called **relational databases**.
 
 **Examples:**
 MySQL, PostgreSQL, Oracle, SQL Server, SQLite
 
-
-
 ### Key-Value Databases
 
-- Store data in the form of **key-value pairs**, where the key acts as an identifier (like an index) and the value contains the actual data.
-- Commonly used for **fast lookups**, **session management**, and **caching**.
-- **Examples:** Redis, Amazon DynamoDB
+* Store data in the form of **key-value pairs**, where the key acts as an identifier (like an index) and the value contains the actual data.
+* Commonly used for **fast lookups**, **session management**, and **caching**.
+* **Examples:** Redis, Amazon DynamoDB
 
 ### Column-Based Databases
 
-- Store data **by columns** instead of rows.
-- Optimized for **analytical queries**, **aggregations**, and **data warehousing**.
-- **Examples:** Apache Cassandra, HBase, Amazon Redshift, ClickHouse
+* Store data **by columns** instead of rows.
+* Optimized for **analytical queries**, **aggregations**, and **data warehousing**.
+* **Examples:** Apache Cassandra, HBase, Amazon Redshift, ClickHouse
 
 ### Graph Databases
 
-- Store data in the form of **nodes (entities)** and **edges (relationships)**.
-- Useful for modeling **networks**, **social graphs**, or **recommendation systems**.
-- **Examples:** Neo4j, Amazon Neptune
+* Store data in the form of **nodes (entities)** and **edges (relationships)**.
+* Useful for modeling **networks**, **social graphs**, or **recommendation systems**.
+* **Examples:** Neo4j, Amazon Neptune
 
 ### Document Databases
 
-- Store data as **JSON-like documents**, allowing flexible and semi-structured schemas.
-- Ideal for **content management systems**, **logs**, and **metadata stores**.
-- **Examples:** MongoDB, CouchDB
+* Store data as **JSON-like documents**, allowing flexible and semi-structured schemas.
+
+* Ideal for **content management systems**, **logs**, and **metadata stores**.
+
+* **Examples:** MongoDB, CouchDB
+
+* All of these (except relational databases) are collectively called **NoSQL databases**.
+
+* In the **data engineering world**, we mostly use **SQL with relational databases**, but **NoSQL systems** are used for special use cases like **real-time data**, **large-scale analytics**, or **unstructured content**.
 
 
-- All of these (except relational databases) are collectively called **NoSQL databases**.
-- In the **data engineering world**, we mostly use **SQL with relational databases**, but **NoSQL systems** are used for special use cases like **real-time data**, **large-scale analytics**, or **unstructured content**.
+
+## 🏗️ Database Structure
+
+* Any **database management system** holds **one server** and **multiple databases** as per the organization’s needs.
+* For example, a company may have an **HR department** and an **Engineering department**.
+  The HR-related data will be stored in the **HR database**, and the engineering-related data will be stored in the **Engineering database**.
+* Each **database** can have **multiple schemas**.
+  A **schema** acts as a **container** that holds a group of tables with similar characteristics or related business logic.
+* This is the standard **hierarchical structure** in which data is organized in most **data-oriented organizations**.
 
 
 ## 🧾 Summary
@@ -107,3 +119,4 @@ MySQL, PostgreSQL, Oracle, SQL Server, SQLite
 * **ER (Entity Relationship)** → Defines how tables are related
 * **SQL** → Language to query and manipulate data
 * **DBMS** → Manages databases efficiently and handles multiple user access
+
