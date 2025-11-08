@@ -35,13 +35,9 @@ Here are the most commonly used clauses you’ll encounter while writing SQL que
 
   This query fetches all the fields from the `orders` table inside the `public` schema of the `salesdb` database.
 
-<<<<<<< HEAD
 
-#### ⚙️ Order of Execution
-=======
 **Order of Execution:**
 
->>>>>>> dade508 (SFCB-016: Added chapter 2 all SQL clause definitions)
 1. **FROM clause** executes first — it accesses the table and retrieves all the data.
 2. **SELECT clause** executes next — it picks the required columns based on what’s defined in the select list.
 
