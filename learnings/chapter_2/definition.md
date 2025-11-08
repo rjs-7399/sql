@@ -36,7 +36,6 @@ Here are the most commonly used clauses you’ll encounter while writing SQL que
 
 
 #### ⚙️ Order of Execution
-
 1. **FROM clause** executes first — it accesses the table and retrieves all the data.
 2. **SELECT clause** executes next — it picks the required columns based on what’s defined in the select list.
 
