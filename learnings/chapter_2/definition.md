@@ -7,7 +7,6 @@ When we need to **retrieve data from a database**, we use the **`SELECT` stateme
 * Once processed, the **results are returned in a tabular form** (rows and columns).
 * Every SQL query can include different **components**, known as **clauses**, each serving a specific purpose.
 
----
 
 ### 🔍 Common SQL Clauses
 
