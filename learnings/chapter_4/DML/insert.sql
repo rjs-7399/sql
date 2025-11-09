@@ -14,7 +14,6 @@ INSERT INTO customers
 VALUES
 	(10, 'John');
 
-
 -- Insert data from customers into persons, In auto mode
 INSERT INTO persons
 SELECT
