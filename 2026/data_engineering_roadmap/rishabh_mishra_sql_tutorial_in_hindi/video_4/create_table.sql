@@ -3,11 +3,11 @@
 --- So here in the query tool we can write the sql query to create the table.
 
 CREATE TABLE customer (
-	id int8 PRIMARY KEY,
-	Name varchar(50) NOT NULL,
-	Age int NOT NULL,
-	City char(50),
-	Salary numeric
+	cust_id int8 PRIMARY KEY,
+	cust_name varchar(50) NOT NULL,
+	age int NOT NULL,
+	city char(50),
+	salary numeric
 );
 
 SELECT * FROM customer;
