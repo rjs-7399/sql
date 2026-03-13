@@ -1,0 +1,1 @@
+SELECT first_name, concat(first_name, '@gmail.com') AS temp_email FROM customer;
