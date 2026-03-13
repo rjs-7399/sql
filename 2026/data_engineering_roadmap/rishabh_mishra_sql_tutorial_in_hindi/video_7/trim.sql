@@ -1,0 +1,3 @@
+-- Trim is mainly used for data cleaning part in the ETL pipeline.
+-- Whenever we receive a data having heading and trailing white spaces we mainly use TRIM to remove
+-- unnecessary white spaces.
