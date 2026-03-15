@@ -3,8 +3,10 @@
 -- payment table is having payment data
 -- We need to perform right join between customer and payment
 -- So that it must reflect all the data from payment.
+-- Here we will be taking customer_id from the payment table
+-- because in the right join the customer_id from customer table will be ignored for non matched keys.
 SELECT
-	c.customer_id,
+	p.customer_id,
 	first_name,
 	last_name,
 	address_id,
