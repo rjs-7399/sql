@@ -12,9 +12,8 @@ SELECT
 	mode,
 	payment_date
 FROM
-customer c
+    customer c
 INNER JOIN
-payment p
-ON
-c.customer_id = p.customer_id
+    payment p
+    ON c.customer_id = p.customer_id
 WHERE first_name = 'Madan';
